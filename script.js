@@ -12,11 +12,10 @@ let appData = {
     savings: false,
 };
 
-let expense = prompt("Введите обязательную статью расходов в этом месяце", ''),
+for (let i = 0; i < 2; i++) {
+    let expense = prompt("Введите обязательную статью расходов в этом месяце", ''),
     moneyToSpend = +prompt('Во сколько обойдется?', '');
-
-appData.expenses = {
-    [expense]: moneyToSpend,
-};
+    appData.expenses[expense] = moneyToSpend;
+}
 
 alert(appData.money/30);
